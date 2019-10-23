@@ -1,12 +1,3 @@
 # Snack
-Python 使用pygame库编写的贪吃蛇小游戏
-# Requirement
-安装python3，并安装pygame库。
-```bash
-pip3 install pygame
-```
-如果想要打包成exe,则需要安装pyinstaller，并运行setup.bat
-```
-pip3 install pyinstaller
-```
-
+Python使用pygame库编写的贪吃蛇小游戏.
+详细信息请查看[博客](https://blog.todest.cn/post/5b10f639/)
