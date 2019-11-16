@@ -20,4 +20,4 @@ jobs:
     - name: run
       run: |
         pip install pyinstaller
-        bash run.bat
+        bash setup.sh
