@@ -1,9 +1,12 @@
 import sys
-import pygame
-from random import randint
 from os.path import join, dirname
+from random import randint
+
+import pygame
 
 BOARD_WIDTH, BOARD_HEIGHT, SIZE = 40, 25, 20
+
+# Color Configuration
 colors = {
     'BLACK': (0, 0, 0),
     'DARK_GRAY': (40, 40, 40),
@@ -30,9 +33,9 @@ class Snake(object):
     def __init__(self):
         self.item = [(BOARD_WIDTH // 2, BOARD_HEIGHT // 2), (BOARD_WIDTH // 2 - 1, BOARD_HEIGHT // 2)]
         self.dirt = (1, 0)
-        self.AI = True
+        self.AI = False  # Low AI
         self.ate = False
-        self.speed = 105
+        self.speed = 180  # initial speed
         self.score = 0
 
     def draw(self, screen):
@@ -143,8 +146,8 @@ def game(screen):
             game_over(screen, menu, snake, food)
             accelerate = 0
         if snake.eat(food):
-            # snake.speed += 1
-            snake.score += 1
+            snake.speed += 1  # Speed Change Logic
+            snake.score += 1  # Score Change Logic
             snake.ate = True
         else:
             snake.ate = False
